@@ -1,11 +1,8 @@
-<p>books works!</p>
-<button (click)="handleClick()" [disabled]="isDisabled">show books</button>
-<!-- one way binding -->
-<!-- <input type="text"(input)="handleInput($event)"/> -->
-<!-- two way binding -->
-<input type="text"[(ngModel)]="myName"/>
-<div>{{myName}}</div>
-<ul>
+<button (click)="iShowing = !iShowing">
+  <ng-container *ngIf="iShowing">Show Books</ng-container>
+  <ng-container *ngIf="!iShowing">Hide Books</ng-container>
+</button>
+<ul *ngIf="iShowing">
   <li>
     <!-- property binding -->
     <img [src]=image [alt]=name width="100">
