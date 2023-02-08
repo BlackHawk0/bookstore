@@ -18,8 +18,5 @@ export class BooksComponent {
     alert('yeepy')
   }
   myName:string = ''
-  handleInput(event: any){
-    this.myName = event.target.value
-  }
 
 }
