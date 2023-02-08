@@ -7,6 +7,7 @@ import { Book } from '../interface/Book';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent {
+
   @Input() book: Book = {} as Book;
   @Output() bookEmiter = new EventEmitter<Book>()
 
