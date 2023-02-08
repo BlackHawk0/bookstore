@@ -1,12 +1,11 @@
+<h1>Programming Books</h1>
 <button (click)="iShowing = !iShowing">
   <ng-container *ngIf="iShowing">Show Books</ng-container>
   <ng-container *ngIf="!iShowing">Hide Books</ng-container>
 </button>
 <ul *ngIf="iShowing">
-  <li>
-    <!-- property binding -->
-    <img [src]=image [alt]=name width="100">
-    {{name}} by {{author}}
-  </li>
+  <ng-container *ngFor="let singleBook of books; let i=index">
+    <app-book (bookEmiter)="addToCart($event)" [book]="singleBook"></app-book>
+  </ng-container>
 </ul>
 
