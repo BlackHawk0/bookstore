@@ -1,5 +1,10 @@
 <p>books works!</p>
 <button (click)="handleClick()" [disabled]="isDisabled">show books</button>
+<!-- one way binding -->
+<!-- <input type="text"(input)="handleInput($event)"/> -->
+<!-- two way binding -->
+<input type="text"[(ngModel)]="myName"/>
+<div>{{myName}}</div>
 <ul>
   <li>
     <!-- property binding -->

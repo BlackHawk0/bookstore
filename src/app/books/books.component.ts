@@ -17,5 +17,9 @@ export class BooksComponent {
     this.isDisabled = true
     alert('yeepy')
   }
+  myName:string = ''
+  handleInput(event: any){
+    this.myName = event.target.value
+  }
 
 }
