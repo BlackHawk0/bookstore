@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RegisterForm } from 'src/app/interface/auth';
 
 @Component({
   selector: 'app-register',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+
+  register: RegisterForm = {
+    email: '',
+    password: '',
+    confirm_password: ''
+  }
 
 }
