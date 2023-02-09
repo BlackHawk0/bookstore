@@ -14,4 +14,9 @@ export class RegisterComponent {
     confirm_password: ''
   }
 
+  onSumbit(){
+    console.log(this.register.confirm_password);
+
+  }
+
 }
