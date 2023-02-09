@@ -26,8 +26,15 @@
         required minlength="6"
         [(ngModel)]="register.password"
         name="password"
+        required
+        #password="ngModel"
         class="p-2 shadow appearance-none rounded border outline-none w-full">
     </div>
+
+    <div [hidden]="password.valid" class="text-red-600 text-xs italic">
+      Password field must be valid
+    </div>
+
     <div class="my-5 w-full">
       <label
         for="password"
