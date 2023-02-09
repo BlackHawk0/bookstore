@@ -6,7 +6,12 @@
       <input type="email"
         placeholder="example@gmail.com"
         [(ngModel)]="register.email" name="email"
+        #email="ngModel"
+        required=""
         class="p-2 shadow appearance-none rounded w-full border outline-none">
+    </div>
+    <div [hidden]="email.valid" class="text-red-600 text-xs italic">
+      Email field must be valid
     </div>
     <div class="my-5 w-full">
       <label
