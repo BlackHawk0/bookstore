@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RegisterForm } from 'src/app/interface/auth';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-register',
@@ -14,9 +16,11 @@ export class RegisterComponent {
     confirm_password: ''
   }
 
-  onSumbit(){
-    console.log(this.register.confirm_password);
+  constructor(private auth: AuthService){}
+  isLoading: boolean = false;
 
+  onSumbit(){
+    this.auth.register
   }
 
 }
