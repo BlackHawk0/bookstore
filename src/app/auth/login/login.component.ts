@@ -12,11 +12,15 @@ export class LoginComponent {
     email: '',
     password: ''
   }
-  isLoading: boolean = false;
 
   constructor(private auth: AuthService){}
+  
   submit(){
     this.auth.login(this.form)
+  }
+
+  isLoading() {
+    return this.auth.isLoading;
   }
 
 }

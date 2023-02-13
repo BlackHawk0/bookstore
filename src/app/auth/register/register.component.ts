@@ -16,12 +16,16 @@ export class RegisterComponent {
     confirm_password: ''
   }
 
+  passwordMatched: boolean = true;
 
   constructor(private auth: AuthService){}
-  isLoading: boolean = false;
 
   onSumbit(){
     this.auth.register(this.register)
+  }
+
+  isLoading() {
+    return this.auth.isLoading;
   }
 
 }
