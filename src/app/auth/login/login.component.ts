@@ -16,7 +16,7 @@ export class LoginComponent {
 
   constructor(private auth: AuthService){}
   submit(){
-    this.auth.login
+    this.auth.login(this.form)
   }
 
 }
