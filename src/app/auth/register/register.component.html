@@ -61,10 +61,10 @@
         value="Register"
         class="p-2 rounded bg-purple-600 text-white hover:bg-purple-900 w-1/3 text-center"
       >
-        <ng-container *ngIf="isLoading">
+        <ng-container *ngIf="isLoading()">
           Loading...
         </ng-container>
-        <ng-container *ngIf="!isLoading">
+        <ng-container *ngIf="!isLoading()">
           Register
         </ng-container>
       </button>

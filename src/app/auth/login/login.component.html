@@ -45,10 +45,10 @@
         [disabled]="myForm.form.invalid"
         class="p-2 rounded bg-purple-600 text-white hover:bg-purple-900 w-1/4 text-center"
         >
-          <ng-container *ngIf="isLoading">
+          <ng-container *ngIf="isLoading()">
             Loading...
           </ng-container>
-          <ng-container *ngIf="!isLoading">
+          <ng-container *ngIf="!isLoading()">
             Login
           </ng-container>
       </button>
